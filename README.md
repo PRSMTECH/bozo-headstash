@@ -1,35 +1,46 @@
-# Bozo Headstash
+<div align="center">
 
-Official e-commerce store for Bozo Headstash premium streetwear.
+# 🎭 Bozo Headstash
 
-## Tech Stack
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=EF4444&center=true&vCenter=true&width=600&height=50&lines=Premium+Streetwear+E-Commerce;Next.js+16+%2B+React+19;3D+Interactive+Experience;Houston+Underground+Fashion" alt="Typing SVG" />
 
-- **Framework**: Next.js 16 (App Router)
-- **Styling**: Tailwind CSS 4
-- **3D Graphics**: React Three Fiber + Drei
-- **Animations**: Framer Motion, React Spring
-- **Mobile UI**: Ant Design Mobile
-- **Icons**: Lucide React
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Three.js](https://img.shields.io/badge/Three.js-R3F-black?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
 
-## Getting Started
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow line" />
 
-```bash
-# Install dependencies
-npm install
+**Official e-commerce store for Bozo Headstash premium streetwear from Houston, TX.**
 
-# Start development server
-npm run dev
+[🌐 Live Site](https://bozo.prsmtechdemos.com) · [🛒 Shop Now](https://bozo.prsmtechdemos.com/shop)
 
-# Build for production
-npm run build
+</div>
 
-# Start production server
-npm start
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+- 🎮 **Interactive 3D Logo** - Drag to rotate, scroll to zoom on homepage
+- 📱 **Mobile-First Design** - Responsive across all devices
+- 🛍️ **Product Catalog** - Category filtering and search
+- 🛒 **Shopping Cart** - Full cart functionality
+- 📦 **Order Tracking** - Track your shipments
+- 🎬 **Video Backgrounds** - Immersive product showcases
 
-## Project Structure
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Framework | Next.js 16 (App Router) |
+| UI Library | React 19 |
+| Styling | Tailwind CSS 4 |
+| 3D Graphics | React Three Fiber + Drei |
+| Animations | Framer Motion |
+| Mobile UI | Ant Design Mobile |
+| Icons | Lucide React |
+| Storage | Supabase Storage |
+| Deployment | Vercel |
+
+## 📁 Project Structure
 
 ```
 src/
@@ -39,41 +50,44 @@ src/
 │   │   ├── product/       # Product details
 │   │   ├── cart/          # Shopping cart
 │   │   ├── gallery/       # Image gallery
-│   │   ├── profile/       # User profile
 │   │   └── ...            # Policy pages
 │   └── api/               # API routes
 ├── components/
-│   ├── layout/            # Layout components (Navbar, Footer, etc.)
-│   └── ui/                # UI components (ProductCard, etc.)
-├── constants/             # Static data (products, business info)
+│   ├── layout/            # Navbar, Footer
+│   └── ui/                # ProductCard, Gallery, etc.
 ├── lib/                   # Config and utilities
 └── utils/                 # Helper functions
 ```
 
-## Features
+## 🚀 Getting Started
 
-- Interactive 3D logo on homepage (drag to rotate, scroll to zoom)
-- Mobile-first responsive design
-- Product catalog with category filtering
-- Shopping cart functionality
-- Order tracking
-- Policy pages (Privacy, Terms, Shipping, Refunds)
+```bash
+# Clone the repository
+git clone https://github.com/PRSMTECH/bozo-headstash.git
 
-## Development
+# Install dependencies
+npm install
 
-### Local Image API
+# Start development server
+npm run dev
 
-During development, images are served from `../media_downloads/` via the `/api/local-image/` route. In production, images should be served from Supabase Storage.
-
-### Environment Variables
-
-Create a `.env.local` file for production configuration:
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+# Build for production
+npm run build
 ```
 
-## License
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-Private - All rights reserved.
+## 🔗 Links
+
+- **Production**: [bozo.prsmtechdemos.com](https://bozo.prsmtechdemos.com)
+- **GitHub**: [github.com/PRSMTECH/bozo-headstash](https://github.com/PRSMTECH/bozo-headstash)
+
+---
+
+<div align="center">
+
+**Built with ❤️ by [PRSMTECH](https://github.com/PRSMTECH)**
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,5&height=80&section=footer" width="100%" />
+
+</div>
