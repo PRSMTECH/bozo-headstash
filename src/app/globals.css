@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

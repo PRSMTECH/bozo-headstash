@@ -14,8 +14,11 @@ export default function StoreLayout({
         <Navbar />
       </div>
       <MobileHeader />
-      <div className="pt-20 md:pt-32 min-h-screen">{children}</div>
-      <Footer />
+      <div className="flex flex-col min-h-screen pb-24 md:pb-0">
+        <div className="pt-20 md:pt-32 grow">{children}</div>
+
+        <Footer />
+      </div>
       <MobileTabBar />
     </>
   );

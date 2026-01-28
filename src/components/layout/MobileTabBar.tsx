@@ -45,7 +45,7 @@ export const MobileTabBar: FC<MobileTabBarProps> = (p) => {
 
   return withNativeProps(
     props,
-    <div className="adm-mobile-tab-bar fixed bottom-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-md border-t border-white/5 pb-safe md:hidden">
+    <div className="adm-mobile-tab-bar fixed inset-x-0 bottom-0 z-50 bg-neutral-950/80 backdrop-blur-xl border-t border-white/5 pb-safe md:hidden transform-gpu">
       <TabBar
         activeKey={pathname}
         onChange={(value) => {
