@@ -7,11 +7,9 @@ const IS_DEV = process.env.NODE_ENV === "development";
 // In Prod: calls Supabase Storage
 export const getImageUrl = (path: string) => {
   if (IS_DEV) {
-    // Encodes the path segments to ensure safe URL usage
     return `/api/local-image/${path}`;
   }
-  // Replace with your actual Supabase URL
-  return `https://your-project.supabase.co/storage/v1/object/public/assets/${path}`;
+  return `https://qewgfglkxmngvxezbern.supabase.co/storage/v1/object/public/Bozo-Headstash/${path}`;
 };
 
 // Mock Data derived from the folder structure provided
