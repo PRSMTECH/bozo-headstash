@@ -1,22 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ThreeCanvas from "./ThreeCanvas";
 
 export default function ShopHero() {
   return (
-    <section className="relative w-full min-h-[60vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 overflow-hidden border-b border-white/5">
+    <section className="relative w-full min-h-[40vh] flex items-center justify-center px-6 md:px-16 py-16 overflow-hidden border-b border-white/5">
       {/* Background elements */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px]" />
       </div>
 
-      {/* Text Side */}
-      <div className="relative z-10 w-full md:w-2/5 space-y-8 text-center md:text-left">
+      {/* Text Content - Centered */}
+      <div className="relative z-10 w-full max-w-4xl space-y-8 text-center">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="space-y-4"
         >
@@ -36,7 +35,7 @@ export default function ShopHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-neutral-400 max-w-lg text-lg font-medium leading-relaxed"
+          className="text-neutral-400 max-w-lg mx-auto text-lg font-medium leading-relaxed"
         >
           Explore our seasonal collection of limited luxury streetwear. Built
           for the bold, designed for the streets.
@@ -46,7 +45,7 @@ export default function ShopHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-wrap gap-4 justify-center md:justify-start pt-4"
+          className="flex flex-wrap gap-4 justify-center pt-4"
         >
           <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-3 rounded-full">
             <span className="h-2 w-2 bg-green-500 rounded-full animate-pulse" />
@@ -60,28 +59,6 @@ export default function ShopHero() {
             </span>
           </div>
         </motion.div>
-      </div>
-
-      {/* 3D Side */}
-      <div className="relative z-10 w-full md:w-3/5 h-[500px] md:h-[800px] mt-12 md:mt-0">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="h-full w-full"
-        >
-          <ThreeCanvas
-            enableGestures={true}
-            showParticles={true}
-            showShadows={true}
-            logoScale={1.5}
-            className="h-full w-full"
-          />
-        </motion.div>
-
-        {/* Decorative elements around 3D logo */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-dashed border-white/5 rounded-full animate-[spin_60s_linear_infinite] pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] border border-dashed border-white/10 rounded-full animate-[spin_40s_linear_infinite_reverse] pointer-events-none" />
       </div>
 
       {/* Scroll indicator */}
