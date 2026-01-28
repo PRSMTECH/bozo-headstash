@@ -41,7 +41,7 @@ export default function Home() {
         </header>
 
         {/* Footer / CTA */}
-        <div className="pointer-events-auto flex flex-col items-center gap-6 pb-12">
+        <div className="pointer-events-auto flex flex-col items-center gap-6 pb-28 md:pb-12">
           <Link
             href="/shop"
             className="group relative overflow-hidden rounded-full bg-white px-10 py-4 font-bold text-black transition-transform hover:scale-105"
