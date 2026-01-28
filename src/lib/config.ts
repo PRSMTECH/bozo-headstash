@@ -9,7 +9,12 @@ export const getImageUrl = (path: string) => {
   if (IS_DEV) {
     return `/api/local-image/${path}`;
   }
-  return `https://qewgfglkxmngvxezbern.supabase.co/storage/v1/object/public/Bozo-Headstash/${path}`;
+  // Encode path segments while preserving slashes
+  const encodedPath = path
+    .split("/")
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+  return `https://qewgfglkxmngvxezbern.supabase.co/storage/v1/object/public/Bozo-Headstash/${encodedPath}`;
 };
 
 // Mock Data derived from the folder structure provided
