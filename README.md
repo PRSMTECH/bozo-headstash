@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bozo Headstash
+
+Official e-commerce store for Bozo Headstash premium streetwear.
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS 4
+- **3D Graphics**: React Three Fiber + Drei
+- **Animations**: Framer Motion, React Spring
+- **Mobile UI**: Ant Design Mobile
+- **Icons**: Lucide React
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── (store)/           # Store route group
+│   │   ├── shop/          # Product listings
+│   │   ├── product/       # Product details
+│   │   ├── cart/          # Shopping cart
+│   │   ├── gallery/       # Image gallery
+│   │   ├── profile/       # User profile
+│   │   └── ...            # Policy pages
+│   └── api/               # API routes
+├── components/
+│   ├── layout/            # Layout components (Navbar, Footer, etc.)
+│   └── ui/                # UI components (ProductCard, etc.)
+├── constants/             # Static data (products, business info)
+├── lib/                   # Config and utilities
+└── utils/                 # Helper functions
+```
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Interactive 3D logo on homepage (drag to rotate, scroll to zoom)
+- Mobile-first responsive design
+- Product catalog with category filtering
+- Shopping cart functionality
+- Order tracking
+- Policy pages (Privacy, Terms, Shipping, Refunds)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Local Image API
 
-## Deploy on Vercel
+During development, images are served from `../media_downloads/` via the `/api/local-image/` route. In production, images should be served from Supabase Storage.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Environment Variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create a `.env.local` file for production configuration:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+```
+
+## License
+
+Private - All rights reserved.
