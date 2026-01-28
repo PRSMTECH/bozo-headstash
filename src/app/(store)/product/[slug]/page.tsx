@@ -17,6 +17,8 @@ export async function generateStaticParams() {
   }));
 }
 
+import ProductShowcase from "@/components/ui/ProductShowcase";
+
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
   const product = await getProductBySlug(slug);
@@ -69,7 +71,13 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </div>
 
+        {/* Extra Showcase Images */}
+        {product.galleryImages && product.galleryImages.length > 0 && (
+          <ProductShowcase images={product.galleryImages} />
+        )}
+
         {/* Related Products Section */}
+
         {relatedProducts.length > 0 && (
           <div className="mt-32 pt-32 border-t border-white/5">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">

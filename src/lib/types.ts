@@ -6,6 +6,7 @@ export interface Product {
   category: string;
   images: string[]; // URLs or paths
   video?: string; // Optional video URL
+  galleryImages?: string[]; // Optional extra gallery images
   slug: string;
 }
 

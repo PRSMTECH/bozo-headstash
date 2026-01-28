@@ -25,11 +25,6 @@ export const metadata: Metadata = {
     "Official Bozo Headstash store. High-quality hoodies, tees, hats, and ski suits for every occasion. Join the movement.",
 };
 
-import Navbar from "@/components/layout/Navbar";
-import { MobileHeader } from "@/components/layout/MobileHeader";
-import { MobileTabBar } from "@/components/layout/MobileTabBar";
-import Footer from "@/components/layout/Footer";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,13 +37,7 @@ export default function RootLayout({
       >
         <ThemeConfig>
           <div className="flex flex-col min-h-screen bg-black">
-            <div className="hidden md:block">
-              <Navbar />
-            </div>
-            <MobileHeader /> {/* Mobile Nav */}
             <main className="grow">{children}</main>
-            <Footer />
-            <MobileTabBar /> {/* Mobile Bottom Nav */}
           </div>
         </ThemeConfig>
       </body>
